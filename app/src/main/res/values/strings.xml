@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Sociomatico</string>
+    <string name="action_settings">Configuracoes</string>
+    <string name="title_ativity_detail_noticia">Noticias</string>
+</resources>
