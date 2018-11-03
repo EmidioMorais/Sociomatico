@@ -2,4 +2,10 @@
     <string name="app_name">Sociomatico</string>
     <string name="action_settings">Configuracoes</string>
     <string name="title_ativity_detail_noticia">Noticias</string>
+
+    <string name="internacional">Internacional</string>
+    <string name="sociedade">Sociedade</string>
+    <string name="politica">Politica</string>
+    <string name="economia">Economia</string>
+    <string name="desporto">Desporto</string>
 </resources>

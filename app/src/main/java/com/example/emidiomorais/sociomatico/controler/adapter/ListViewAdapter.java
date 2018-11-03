@@ -15,7 +15,7 @@ import com.example.emidiomorais.sociomatico.R;
 import java.util.ArrayList;
 
 /**
- * created by Emidio Morais.
+ * created by.
  */
 
 public class ListViewAdapter extends BaseAdapter {

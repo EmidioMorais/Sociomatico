@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/Internacional"
+            android:icon="@drawable/ic_info_white"
+            android:title="@string/internacional"
+            >
+
+        </item>
+
+        <item
+            android:id="@+id/Sociedade"
+            android:icon="@drawable/ic_info_white"
+            android:title="@string/sociedade"
+            >
+
+        </item>
+
+        <item
+            android:id="@+id/Politica"
+            android:icon="@drawable/ic_info_white"
+            android:title="@string/politica"
+            >
+
+        </item>
+
+        <item
+            android:id="@+id/Economia"
+            android:icon="@drawable/ic_info_white"
+            android:title="@string/economia"
+            >
+
+        </item>
+
+        <item
+            android:id="@+id/Desporto"
+            android:icon="@drawable/ic_info_white"
+            android:title="@string/desporto"
+            >
+
+        </item>
+
+
+
+
+    </group>
+
+</menu>
