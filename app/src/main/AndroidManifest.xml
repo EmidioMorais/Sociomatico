@@ -19,7 +19,16 @@
         <activity android:name=".DetailNoticia" />
         <activity android:name=".controler.adapter.ListViewAdapter" />
         <activity android:name=".controler.core.Noticia" />
-        <activity android:name=".ExampleInstrumentedTest"></activity>
+        <activity android:name=".ExampleInstrumentedTest" />
+        <activity
+            android:name=".Internacional"
+            android:label="@string/title_activity_internacional"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.emidiomorais.sociomatico.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

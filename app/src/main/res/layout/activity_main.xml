@@ -52,7 +52,7 @@
         android:layout_widht="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@android:color/black"
+        android:background="@android:color/background_action_bar"
         android:id="@+id/navigation_view"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/header"

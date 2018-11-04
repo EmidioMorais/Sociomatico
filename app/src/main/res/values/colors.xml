@@ -6,7 +6,7 @@
     <item name="background_Linear_layout" type="color">#3A3E7B</item>_
     <item name="background_textview_autor" type="color">#FAFAFA</item>
     <item name="background_textview_noticia" type="color">#FAFAFA</item>
-    <item name="background_action_bar" type="color">#D50000</item>
+    <item name="background_action_bar" type="color">#3F51B5</item>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
