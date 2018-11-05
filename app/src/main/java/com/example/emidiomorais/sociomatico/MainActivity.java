@@ -22,7 +22,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Toolbar toolbar;
+    private Toolbar toolbar = setTitle(getResources().getString(android.R.string.app_name));
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
 
