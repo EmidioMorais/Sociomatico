@@ -29,6 +29,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.emidiomorais.sociomatico.MainActivity" />
         </activity>
+        <activity
+            android:name=".DetailInternacional"
+            android:label="@string/title_activity_detail_internacional"
+            android:parentActivityName=".Internacional"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.emidiomorais.sociomatico.Internacional" />
+        </activity>
     </application>
 
 </manifest>

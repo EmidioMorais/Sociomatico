@@ -5,21 +5,26 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.GridView;
+import android.widget.Toolbar;
 
 import com.example.emidiomorais.sociomatico.controler.adapter.GridViewAdapter;
 
 public class Internacional extends AppCompatActivity {
 
+    private Toolbar toolbar;
     private GridView gridView;
     private GridViewAdapter adapter;
-    public int getImagemInternacional;
-    public int getNomeInternacional;
-    private int imagemInternacional;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_internacional);
+
+
+        setUpToolbar();
+
+
 
         gridView = (GridView) findViewById(R.id.internacional_gridview);
         adapter = new GridViewAdapter(getApplicationContext());
@@ -28,7 +33,7 @@ public class Internacional extends AppCompatActivity {
         for (i = 0; i < 10; i++) {
             Internacional i = new Internacional();
             i.setImagemInternacional(R.drawable.sociomatico);
-            i.serNomeInternacional("Nome Interacional");
+            i.setNomeInternacional("Nome Interacional");
 
             adapter.addItem(i);
         }
@@ -36,7 +41,7 @@ public class Internacional extends AppCompatActivity {
         gridView.setAdapter();
     }
 
-    private void serNomeInternacional(String nome_interacional) {
+    private void setNomeInternacional(String nome_interacional) {
 
     }
 
@@ -55,10 +60,13 @@ public class Internacional extends AppCompatActivity {
             return true;
         }
 
-        return false;
+        return super.onOptionsItemSelected(item);
     }
 
-    public void setImagemInternacional(int imagemInternacional) {
-        this.imagemInternacional = imagemInternacional;
+    public void setUpToolbar(){
+        toolbar = (Toolbar) findViewById(R.id.toolbar_main);
+        toolbar.setTitle("Internacional");
+
+        setSupportActionBar().show();
     }
 }

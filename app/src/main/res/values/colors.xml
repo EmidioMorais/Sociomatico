@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <item name="background_listview_main" type="color">#98D7B0</item>
+    <item name="background_listview_main" type="color">#E0E0E0</item>
     <item name="background_activity_main" type="color">#B9F0C6</item>
     <item name="background_Linear_layout" type="color">#3A3E7B</item>_
     <item name="background_textview_autor" type="color">#FAFAFA</item>

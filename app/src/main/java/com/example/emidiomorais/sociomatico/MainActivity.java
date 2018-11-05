@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
                     menuItem.setChecked(true);
                     switch (menuItem.getItemId)){
                     case R.id.Internacional:
-                    Toast.makeText(getApplicationContext()"Internacional selecionado", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getApplicationContext()"Internacional selecionado", Toast.LENGTH_SHORT).show();
                     Intent internacional = new Intent(getApplicationContext(), Internacional.class);
                     startActivity(internacional);
 

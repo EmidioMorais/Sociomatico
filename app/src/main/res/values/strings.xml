@@ -9,4 +9,5 @@
     <string name="economia">Economia</string>
     <string name="desporto">Desporto</string>
     <string name="title_activity_internacional">Internacional</string>
+    <string name="title_activity_detail_internacional">DetailInternacional</string>
 </resources>
