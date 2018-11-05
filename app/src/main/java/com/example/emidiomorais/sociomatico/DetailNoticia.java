@@ -16,7 +16,6 @@ public class DetailNoticia extends AppCompatActivity {
      *
      */
 
-    private Toolbar toolbar = setTitle(getResources().getString(android.R.string.app_name));
     private  TextView descricaoNoticia;
     private ImageView imageNoticia;
 
@@ -42,10 +41,8 @@ public class DetailNoticia extends AppCompatActivity {
     }
 
     private void setUpToolbar (){
-        toolbar = (Toolbar) findViewById(R.id.toolbar_main);
-        toolbar = setTitle(getResources().getString(android.R.string.app_name));
 
-        setSupportActionBar(toolbar);
+
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().show();

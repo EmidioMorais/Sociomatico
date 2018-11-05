@@ -41,14 +41,14 @@
                 android:textColor="@android:color/black"/>
 
             <ImageView
-                android:id="@+id/noticia_detail_imageview"
+                android:id="@+id/imagem_detail_internacional_imageview"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_below="@id/titulo_detail_noticia_textview"
                 android:src="@drawable/sociomatico"/>
 
             <TextView
-                android:id="@+id/descricao_noticia_textview"
+                android:id="@+id/descricao_internacional_textview"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="16dp"

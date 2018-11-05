@@ -2,7 +2,6 @@ package com.example.emidiomorais.sociomatico;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.preference.TwoStatePreference;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -231,7 +230,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setUpToolbar (){
         toolbar = (Toolbar) findViewById(R.id.toolbar_main);
-        toolbar = setTitle(getResources().getString(android.R.string.app_name));
+
 
         setSupportActionBar(toolbar);
         getSupportActionBar().setHomeButtonEnabled(true);

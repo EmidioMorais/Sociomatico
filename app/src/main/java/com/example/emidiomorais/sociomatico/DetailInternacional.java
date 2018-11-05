@@ -1,30 +1,23 @@
 package com.example.emidiomorais.sociomatico;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class DetailInternacional extends AppCompatActivity {
 
+    private TextView nomeInternacional;
+    private ImageView imagemInternacional;
+    private TextView descricaoInternacional;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_internacional);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        nomeInternacional = (TextView) findViewById(R.id.nome_detail_internacional_textview);
+        imagemInternacional = (ImageView) findViewById(R.id.imagem_detail_internacional_imageview);
+        descricaoInternacional = (TextView) findViewById(R.id.descricao_internacional_textview);
+
     }
-
 }
