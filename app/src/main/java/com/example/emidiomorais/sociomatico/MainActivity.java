@@ -1,11 +1,12 @@
 package com.example.emidiomorais.sociomatico;
 
 import android.content.Intent;
+import android.os.Bundle;
+import android.preference.TwoStatePreference;
+import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 import android.widget.Toolbar;
 
 import com.example.emidiomorais.sociomatico.controler.adapter.ListViewAdapter;
+import com.example.emidiomorais.sociomatico.controler.core.Internacional;
 import com.example.emidiomorais.sociomatico.controler.core.Noticia;
 
 import java.util.ArrayList;
@@ -72,11 +74,15 @@ public class MainActivity extends AppCompatActivity {
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener){
             @Override
-                    public boolean OnNavigationItemSelected(MenuItem menuItem){
+                    public boolean OnNavigationItemSelected(MenuItem
+            MenuItem menuItem;
+            menuItem){
                     menuItem.setChecked(true);
                     switch (menuItem.getItemId)){
                     case R.id.Internacional:
                     Toast.makeText(getApplicationContext()"Internacional selecionado", Toast.LENGTH_SHORT).show();
+                    Intent internacional = new Intent(getApplicationContext(), Internacional.class);
+                    startActivity(internacional);
 
                         break:
                     case  R.id.Sociedade:
@@ -237,7 +243,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(toolbar != null){
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            toolbar.setNavigationIcon(R.drawable.ic_drawer);
+            toolbar.setNavigationIcon(R.drawable.ic_info_white);
             toolbar.setNavigationOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
