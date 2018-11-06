@@ -21,15 +21,6 @@
         <activity android:name=".controler.core.Noticia" />
         <activity android:name=".ExampleInstrumentedTest" />
         <activity
-            android:name=".Internacional"
-            android:label="@string/title_activity_internacional"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.emidiomorais.sociomatico.MainActivity" />
-        </activity>
-        <activity
             android:name=".DetailInternacional"
             android:label="@string/title_activity_detail_internacional"
             android:parentActivityName=".Internacional"

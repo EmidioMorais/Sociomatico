@@ -3,25 +3,19 @@ package com.example.emidiomorais.sociomatico;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
-import android.widget.Toolbar;
 
 import com.example.emidiomorais.sociomatico.controler.adapter.ListViewAdapter;
-import com.example.emidiomorais.sociomatico.controler.core.Internacional;
 import com.example.emidiomorais.sociomatico.controler.core.Noticia;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Toolbar toolbar = setTitle(getResources().getString(android.R.string.app_name));
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
 
@@ -65,44 +59,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-        setUpToolbar();
-        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        navigationView = (NavigationView) findViewById(R.id.navigation_view);
-        setUpNavDrawer();
-
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener){
-            @Override
-                    public boolean OnNavigationItemSelected(MenuItem
-            MenuItem menuItem;
-            menuItem){
-                    menuItem.setChecked(true);
-                    switch (menuItem.getItemId)){
-                    case R.id.Internacional:
-                    //Toast.makeText(getApplicationContext()"Internacional selecionado", Toast.LENGTH_SHORT).show();
-                    Intent internacional = new Intent(getApplicationContext(), Internacional.class);
-                    startActivity(internacional);
-
-                        break:
-                    case  R.id.Sociedade:
-                    Toast.makeText(getApplicationContext()"Sociedade selecionado", Toast.LENGTH_SHORT).show();
-                        break;
-                    case R.id.Politica:
-                    Toast.makeText(getApplicationContext()"Politica selecionado", Toast.LENGTH_SHORT).show();
-                            break;
-                    case R.id.Economia:
-                    Toast.makeText(getApplicationContext()"Economia selecionado", Toast.LENGTH_SHORT).show();
-                        break;
-                    case R.id.Desporto:
-                    Toast.makeText(getApplicationContext()"Desporto selecionado", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-
-                return true;
-
-
-            }
-        }
 
     }
 
@@ -226,34 +182,5 @@ public class MainActivity extends AppCompatActivity {
 
         arrayNoticia.add(noticia);
         adapter.addItem(noticia);
-    }
-
-    private void setUpToolbar (){
-        toolbar = (Toolbar) findViewById(R.id.toolbar_main);
-
-
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().show();
-    }
-
-    private void setUpNavDrawer(){
-
-        if(toolbar != null){
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            toolbar.setNavigationIcon(R.drawable.ic_info_white);
-            toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-                    drawerLayout.openDrawer(GravityCompat.START);
-
-                }
-            });
-
-
-        }
-
     }
 }
