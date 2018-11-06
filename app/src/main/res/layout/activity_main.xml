@@ -19,11 +19,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@id/toolbar_main"
+        <android.support.v7.widget.RecyclerView
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/background_action_bar"/>
+            android:layout_height="match_parent"
+            android:id="@+id/recyclerHome">
+
+    </android.support.v7.widget.RecyclerView>
 
 
     </android.support.design.widget.AppBarLayout>
