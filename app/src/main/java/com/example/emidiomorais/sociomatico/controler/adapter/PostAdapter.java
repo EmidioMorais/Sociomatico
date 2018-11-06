@@ -1,16 +1,16 @@
 package com.example.emidiomorais.sociomatico.controler.adapter;
-
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
-import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import java.util.List;
+
 import com.example.emidiomorais.sociomatico.R;
+
+import java.util.List;
 
 
 
@@ -57,21 +57,6 @@ public class PostAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         }
         else if(holder instanceof  footer){
             ((footer) holder).context = context;
-        }
-        else {
-            Post post=getItem(position);
-            ((VideoViewHolder)holder).vTitle.setText(Html.fromHtml(post.getTitle().getRendered()));
-            Excerpt excerpt=post.getExcerpt();
-            if(excerpt!=null){
-                if(excerpt.getRendered().length()>=254){
-                    ((VideoViewHolder)holder).vExcerpt.setText(Html.fromHtml(excerpt.getRendered().substring(0,254)+" .."));
-                }
-                else {
-                    ((VideoViewHolder)holder).vExcerpt.setText(Html.fromHtml(post.getExcerpt()+" .."));
-                }
-            }
-            ((VideoViewHolder) holder).context = context;
-            ((VideoViewHolder) holder).content=post.getContent().getRendered();
         }
     }
     @Override
@@ -143,5 +128,8 @@ public class PostAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         public footer(View v) {
             super(v);
         }
+    }
+
+    private class Post {
     }
 }

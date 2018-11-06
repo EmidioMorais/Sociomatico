@@ -8,14 +8,25 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+import java.util.List;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 import com.example.emidiomorais.sociomatico.controler.adapter.ListViewAdapter;
+import com.example.emidiomorais.sociomatico.controler.adapter.PostAdapter;
 import com.example.emidiomorais.sociomatico.controler.core.Noticia;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    private final Object parent;
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
 
@@ -25,9 +36,9 @@ public class MainActivity extends AppCompatActivity {
     private ListView ListView;
     private ListViewAdapter adapter;
 
-
-
-
+    public MainActivity() {
+        parent = null;
+    }
 
 
     @Override
@@ -35,31 +46,42 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        RecyclerView recyclerView=findViewById(R.id.recyclerHome);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        final PostAdapter postAdapter=new PostAdapter(PostAdapter,this,false,false);
+        recyclerView.setAdapter(postAdapter);
 
-        arrayNoticia = new ArrayList<Noticia>();
-        ListView = (ListView) findViewById(R.id.listview_item);
+        Retrofit retrofit=new Retrofit.Builder()
+                .baseUrl(Config.base_url)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
 
-        adapter = new ListViewAdapter(getApplicationContext());
-        for (int i = 0; i <5; i++) {
-            noticia1();
-            noticia2();
-            noticia3();
-            noticia4();
-            noticia5();
+        WordPressService wordPressService=retrofit.create(WordPressService.class);
+        Call<List<Post>> call=wordPressService.getAllPost();
+        call.enqueue(new Callback<List<Post>>() {
 
-        }
-        ListView.setAdapter(adapter);
 
-        ListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent detailNoticia = new Intent(getApplicationContext(),DetailNoticia.class);
-                detailNoticia.putExtra(POSITION_NOTICIA,position);
+
+            {
+                noticia1();
+                noticia2();
+                noticia3();
+                noticia4();
+                noticia5();
+
+            }
+
+            {
+                @Override
+                public void onItemClick (AdapterView < ? > parent, View Object view;
+                view,int position, long id){
+                Intent detailNoticia = new Intent(getApplicationContext(), DetailNoticia.class);
+                detailNoticia.putExtra(POSITION_NOTICIA, position);
                 startActivity(detailNoticia);
 
             }
-        });
-
+            };
+        }
     }
 
     public void noticia1() {
